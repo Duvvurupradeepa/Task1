@@ -1,0 +1,25 @@
+# calculate sum and product and check greater number ?
+
+#!/bin/bash
+ number() {
+ sum=$(( $1 + $2 ))
+ product=$(( $1 * $2 ))
+}
+
+comparnum() {
+if [ $1 -gt $2 ]; then
+   echo "The first number is greater"
+ elif [ $1 -lt $2 ]; then
+  echo "The second number is greater"
+else
+echo "both are equal"
+fi
+}
+read -p "Enter first number : $num1"
+read -p "Enter second number : $num2"
+
+calsumprod $num1 $num2
+echo "sum is $sum"
+echo "prod is $prod"
+comparnum $num1 $num2
+
