@@ -1,0 +1,29 @@
+# checking Even or odd  and comparing two numbers ?
+
+# Write a shell script with a function to check  if a number is even or add 
+#then compare two numbers with input by the user to determing  if they are equal if not which one is greater ?
+
+#!/bin/bash
+ 
+read -p "Enter first number:" $num1
+read -p "Enter second number:" $num2 
+
+numnber() {
+  if [ $(( $1 % 2 )) -eq 0 ]; then
+    echo "$1 is even number"
+   else
+    echo "$1 is odd number"
+  fi
+}
+
+comparnum() {
+ if [ $1 -eq $2 ]; then
+  echo "The number is equal"
+    else
+  echo "The number is not equal"
+fi
+
+}
+
+comparnum $num1 $num2
+
